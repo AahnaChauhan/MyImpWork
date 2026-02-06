@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My little peice of pastry ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffeef5);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .screen {
+      display: none;
+      padding: 30px;
+      max-width: 500px;
+      animation: fade 0.6s ease;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    h1, h2 {
+      color: #c2185b;
+    }
+
+    p {
+      color: #5a2a3a;
+      line-height: 1.6;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      margin-top: 10px;
+      width: 200px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      background: #ff5c8a;
+      color: white;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #ff3b73;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .heart {
+      position: absolute;
+      color: pink;
+      font-size: 20px;
+      animation: floatUp 4s linear infinite;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-800px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SCREEN 1 -->
+  <div class="screen active" id="screen1">
+    <h2>Verify if you are my boyfriend.</h2>
+    <p>Enter the secret code here:</p>
+    <input id="codeInput" placeholder="What do you love the most?">
+    <br>
+    <button onclick="checkCode()">Verify</button>
+  </div>
+
+  <!-- SCREEN 2 -->
+  <div class="screen" id="screen2">
+    <h1>HEYYY WELCOME HONEY PIE ❤️</h1>
+    <p>Here, I have something for you ;)</p>
+    <button onclick="nextScreen(3)">Click here to see what it is!</button>
+  </div>
+
+  <!-- SCREEN 3 -->
+  <div class="screen" id="screen3">
+    <h2>A bunch of phools for my lovely fool!😚</h2>
+    <img src="Elegant bouquet of roses and lilies.png" alt="Flowers for you." width="200px" height="300px">
+    <br>
+    <button onclick="acceptBouquet()">Accept, please:)</button>
+  </div>
+
+  <!-- SCREEN 4 -->
+  <div class="screen" id="screen4">
+    <h2>Shhh...There's more.</h2>
+    <button onclick="nextScreen(5)">HURRY UP, you always keep me waiting🙄</button>
+  </div>
+
+  <!-- SCREEN 5 (Milestone 1) -->
+  <div class="screen" id="screen5">
+    <img src="ImagePhase1.jpeg" alt="Us on the staircase." width="354.98px" height="300px">
+    <p>
+      The very first time we started meeting under the bridge, before sun could even rise itself, you filled my days with so much sweet limelight already.<br>I could never imagine how it would ever be without you, how i would even be where i am, without you...<br>You pulling me towards you on the sidewalks, me doing your makeup on the stairs, woh doggie wale chill uncle, you bringing me appy omggg >~<, Ather rides (me driving), the plane sighting and that silly crab, lots and lots of flowers, our first hug("Give me a beeeeg huggie"), our first kiss, playlists for each other, irreplaceable memories for a pretty future.<br>I love it all beyond imagination! 
+    </p>
+    <button onclick="nextScreen(6)">Nexttttt</button>
+  </div>
+
+  <!-- SCREEN 6 (Milestone 2) -->
+  <div class="screen" id="screen6">
+    <img src="ImagePhase2.jpeg" width="228px" height="200px">
+    <img src="ImagePhase2(2).jpeg" width="256px" height="200px">
+    <p>
+     !4th of June 2025. The day forever etched in our souls, a day to always remember no matter what, a date which is alredy a part of our lives.<br>Trust me I might forget my own name but Tanmay, I will never forget how you caught me wayyy off my guard with those paper rings. They are really special along with the ones that i gave to you. These rings were the beginning of our marriage. They are the reason we are married in our heads and i cant lie it was the sweetest it could ever be.<br>All along i have realised that is one, among all, is my favourite story to tell and i will be disappointed in myself if i ever lose even a single chance to preach it.<br>Yes, it is THAAAT PEAK:)
+    </p>
+    <button onclick="nextScreen(7)">The Next Chapter→</button>
+  </div>
+ 
+ <!-- SCREEN 7 (Milestone 3) -->
+  <div class="screen" id="screen7">
+    <img src="ImagePhase3.jpeg" width="300px" height="360px">
+    <p>
+        Your favourite "Monster" drink, walk mid rain, Iris, the other staircase, THE GARDEN. You made my monsoon special than ever. I cant think about all those little moments without feeling the tingling sensation in my stomach.<br>The insect i hate is in my stomach right nowwwwww T_T<br>The smell of rain mixed with you cologne is something that is stuck in my mind. It is tattooed so deep, i dont think i'm ever gonna forget it in my life.<br>Every handplacement, every pattern of your breath, every curve in your voice and you silhouette. It is soooooo very nive to recall everything, i just wish you could see my smile right now ommmggg!!
+    </p>
+    <button onclick="nextScreen(8)">There is moreee yet</button>
+  </div>
+
+<!-- SCREEN 8 (Milestone 4) -->
+  <div class="screen" id="screen8">
+    <img src="fam1.jpeg" width="200px" height="240px">
+    <img src="fam2.jpeg" width="200px" height="240px">
+    <p>
+      Getting families envolved + the first date.
+    </p>
+    <button onclick="nextScreen(9)">Next →</button>
+  </div>
+
+
+<!-- SCREEN 9 (Milestone 5) -->
+  <div class="screen" id="screen9">
+    <img src="us2.jpeg" width="180px" height="150px">
+    <img src="us3.jpeg" width="207px" height="150px">
+    <img src="us6.jpeg" width="231px" height="150px">
+    <p>
+           Pune.
+    </p>
+    <button onclick="nextScreen(10)">Next →</button>
+  </div>
+
+<!-- SCREEN 10 (Milestone 6) -->
+  <div class="screen" id="screen10">
+    <img src="./us1.jpeg" width="150px" height="223.5px">
+    <img src="./us4.jpeg" width="150px" height="165px">
+    <img src="./us5.jpeg" width="220.5px" height="150px">
+    <img src="./us7.jpeg" width="150px" height="187.5px">
+    <p>
+      Right now.
+    </p>
+    <button onclick="nextScreen(11)">Next →</button>
+  </div>
+
+  <!-- SCREEN 11 -->
+  <div class="screen" id="screen11">
+    <h2>
+      And after all of it, this. Something that we have created together. A brand new and beautiful chapter of our lives, waiting to be filmed. 
+     </h2>
+    <p>
+      You might be wondering what all this is for…  
+      It’s just me trying to convey something that has been unsaid and untold.
+    </p>
+    <h2>There’s something I mean to ask you, right here, right now.</h2>
+    <button onclick="nextScreen(12)">Babe,</button>
+  </div>
+
+  <!-- SCREEN 12 -->
+  <div class="screen" id="screen12">
+    <h1>Will you be my Valentine?💓</h1>
+    <button onclick="finalYes()">Yes.</button>
+    <button onclick="finalYes()">Yes, without a doubt🥰</button>
+  </div>
+
+  <!-- SCREEN 13 -->
+  <div class="screen" id="screen13">
+    <h2>YAYYYYYYYYYY<br>You have got yourself an amazing, mind blowingly loving you valentine this year, i hope you love it just as much as she does.</h2>
+    <p>
+      No matter how much i tell you, it will never be enough to contain how much i love you. These past 8-9 months have been quite happy and i'd give it to you.<br>Tanmay, thankyou for everything you do, thankyou for being mine, thankyou for choosing me.<br>I love you so much and it will never change, you are my everything. My love.
+    </p>
+<h3>HAPPY VALENTINE'S DAY, MY DARLING SWEETHEART❤️</h3>
+
+  </div>
+
+<script>
+  function nextScreen(n) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen' + n).classList.add('active');
+  }
+
+  function checkCode() {
+    // CHANGE THIS SECRET CODE
+    const secret = "cockroach";
+    const input = document.getElementById("codeInput").value.toLowerCase();
+    if (input === secret) {
+      nextScreen(2);
+    } else {
+      alert("Nuh uh, Come onnnn Tanmie! (Starts with co- and yes, its a ragebait XD)");
+    }
+  }
+
+  function acceptBouquet() {
+    for (let i = 0; i < 30; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "🌹";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0px";
+      heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }
+    nextScreen(4);
+  }
+
+  function finalYes() {
+    for (let i = 0; i < 40; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💘";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0px";
+      heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }
+    nextScreen(13);
+  }
+</script>
+
+</body>
+</html>
